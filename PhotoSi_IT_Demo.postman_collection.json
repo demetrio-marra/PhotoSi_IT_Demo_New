@@ -1,0 +1,1454 @@
+{
+  "info": {
+    "_postman_id": "8297683e-a09d-48d8-b741-560974d97e2a",
+    "name": "PhotoSi_IT_Demo",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Ordini",
+      "item": [
+        {
+          "name": "PureCRUD",
+          "item": [
+            {
+              "name": "GetOrdiniCRUD",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{OrdiniBaseUrl}}crud",
+                  "host": [
+                    "{{OrdiniBaseUrl}}crud"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GetOrdineCRUD",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{OrdiniBaseUrl}}crud/1",
+                  "host": [
+                    "{{OrdiniBaseUrl}}crud"
+                  ],
+                  "path": [
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "CreateOrdineCRUD",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"acquirenteId\": 1,\r\n    \"recapitoId\": 1,\r\n    \"data\": \"2022-10-03T09:35:45.7223562\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{OrdiniBaseUrl}}crud",
+                  "host": [
+                    "{{OrdiniBaseUrl}}crud"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "UpdateOrdineCRUD",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"acquirenteId\": 1,\r\n    \"recapitoId\": 1,\r\n    \"data\": \"2022-10-03T08:35:45.7223562\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{OrdiniBaseUrl}}crud/2",
+                  "host": [
+                    "{{OrdiniBaseUrl}}crud"
+                  ],
+                  "path": [
+                    "2"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "DeleteOrdineCRUD",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{OrdiniBaseUrl}}crud/2",
+                  "host": [
+                    "{{OrdiniBaseUrl}}crud"
+                  ],
+                  "path": [
+                    "2"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "GetOrdini",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{OrdiniBaseUrl}}",
+              "host": [
+                "{{OrdiniBaseUrl}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetOrdine",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{OrdiniBaseUrl}}1",
+              "host": [
+                "{{OrdiniBaseUrl}}1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CreateOrdine",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"acquirenteId\": 1,\r\n    \"recapitoCap\": \"98100\",\r\n    \"recapitoIndirizzo\": \"via del Vespo\",\r\n    \"recapitoCitta\": \"Roma\",\r\n    \"prodotti\": [\r\n        {\r\n            \"prodottoId\": 9,\r\n            \"quantita\": 7\r\n        },\r\n        {\r\n            \"prodottoId\": 7,\r\n            \"quantita\": 5\r\n        }\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{OrdiniBaseUrl}}",
+              "host": [
+                "{{OrdiniBaseUrl}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UpdateOrdine",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"recapitoCap\": \"98100\",\r\n    \"recapitoIndirizzo\": \"via del Vespro\",\r\n    \"recapitoCitta\": \"Verona\",\r\n    \"prodotti\": [\r\n        {\r\n            \"prodottoId\": 1,\r\n            \"quantita\": 88\r\n        },\r\n        {\r\n            \"prodottoId\": 6,\r\n            \"quantita\": 88\r\n        },\r\n        {\r\n            \"prodottoId\": 7,\r\n            \"quantita\": 88\r\n        }\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{OrdiniBaseUrl}}1",
+              "host": [
+                "{{OrdiniBaseUrl}}1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DeleteOrdine",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{OrdiniBaseUrl}}1",
+              "host": [
+                "{{OrdiniBaseUrl}}1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Prodotti",
+      "item": [
+        {
+          "name": "GetProdotti",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "[\r\n    1,2\r\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{ProdottiBaseUrl}}multiple",
+              "host": [
+                "{{ProdottiBaseUrl}}multiple"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetAllProdotti",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{ProdottiBaseUrl}}",
+              "host": [
+                "{{ProdottiBaseUrl}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetProdotto",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{ProdottiBaseUrl}}2",
+              "host": [
+                "{{ProdottiBaseUrl}}2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CreateProdotto",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"codice\": \"FOTO_30X30\",\r\n    \"descrizione\": \"Foto 30 x 30\",\r\n    \"prezzo\": 25.50,\r\n    \"categoria\": \"foto\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{ProdottiBaseUrl}}",
+              "host": [
+                "{{ProdottiBaseUrl}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UpdateProdotto",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"codice\": \"FOTO_50X50\",\r\n    \"descrizione\": \"Foto 50 x 50\",\r\n    \"prezzo\": 60.50,\r\n    \"categoria\": \"foto\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{ProdottiBaseUrl}}1",
+              "host": [
+                "{{ProdottiBaseUrl}}1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DeleteProdotto",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{ProdottiBaseUrl}}3",
+              "host": [
+                "{{ProdottiBaseUrl}}3"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Recapiti",
+      "item": [
+        {
+          "name": "GetRecapiti",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{RecapitiBaseUrl}}",
+              "host": [
+                "{{RecapitiBaseUrl}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetRecapito",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{RecapitiBaseUrl}}2",
+              "host": [
+                "{{RecapitiBaseUrl}}2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetRecapitoByOrdine",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{RecapitiBaseUrl}}ordine/6",
+              "host": [
+                "{{RecapitiBaseUrl}}ordine"
+              ],
+              "path": [
+                "6"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CreateRecapito",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"ordineId\": 1,\r\n    \"indirizzo\": \"via del Vespro\",\r\n    \"cap\": \"98100\",\r\n    \"citta\": \"Roma\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{RecapitiBaseUrl}}",
+              "host": [
+                "{{RecapitiBaseUrl}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UpdateRecapito",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"ordineId\": 1,\r\n    \"indirizzo\": \"via della VEspa\",\r\n    \"cap\": \"98100\",\r\n    \"citta\": \"Roma\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{RecapitiBaseUrl}}1",
+              "host": [
+                "{{RecapitiBaseUrl}}1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UpdateRecapitoByOrdine",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"ordineId\": 1,\r\n    \"indirizzo\": \"via della VEspa\",\r\n    \"cap\": \"98100\",\r\n    \"citta\": \"Roma\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{RecapitiBaseUrl}}ordine/1",
+              "host": [
+                "{{RecapitiBaseUrl}}ordine"
+              ],
+              "path": [
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DeleteRecapito",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{RecapitiBaseUrl}}1002",
+              "host": [
+                "{{RecapitiBaseUrl}}1002"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DeleteRecapitoByOrdine",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{RecapitiBaseUrl}}ordine/1",
+              "host": [
+                "{{RecapitiBaseUrl}}ordine"
+              ],
+              "path": [
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Utenti",
+      "item": [
+        {
+          "name": "GetUtenti",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{UtentiBaseUrl}}",
+              "host": [
+                "{{UtentiBaseUrl}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetUtente",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{UtentiBaseUrl}}2",
+              "host": [
+                "{{UtentiBaseUrl}}2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CreateUtente",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"username\": \"demetrio.marra\",\r\n    \"nominativo\": \"Demetrio Marra\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{UtentiBaseUrl}}",
+              "host": [
+                "{{UtentiBaseUrl}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UpdateUtente",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"username\": \"demetrio.marra2\",\r\n    \"nominativo\": \"Demetrio Malla\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{UtentiBaseUrl}}2",
+              "host": [
+                "{{UtentiBaseUrl}}2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DeleteUtente",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{UtentiBaseUrl}}2",
+              "host": [
+                "{{UtentiBaseUrl}}2"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "ProdottiOrdinati",
+      "item": [
+        {
+          "name": "GetProdottiOrdinati",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{ProdottiOrdinatiBaseUrl}}",
+              "host": [
+                "{{ProdottiOrdinatiBaseUrl}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetProdottiOrdinatiByOrdine",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{ProdottiOrdinatiBaseUrl}}ordine/20",
+              "host": [
+                "{{ProdottiOrdinatiBaseUrl}}ordine"
+              ],
+              "path": [
+                "20"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetProdottoOrdinato",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{ProdottiOrdinatiBaseUrl}}2",
+              "host": [
+                "{{ProdottiOrdinatiBaseUrl}}2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CreateProdottoOrdinato",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "        {\r\n            \"prodottoId\": 4,\r\n            \"ordineId\": 20,\r\n            \"codice\": \"FOTO_120X75\",\r\n            \"descrizione\": \"Foto 120 x 75\",\r\n            \"categoria\": \"foto\",\r\n            \"prezzo\": 120.57,\r\n            \"quantita\": 13\r\n        }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{ProdottiOrdinatiBaseUrl}}",
+              "host": [
+                "{{ProdottiOrdinatiBaseUrl}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CreateProdottiOrdinati",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "[\r\n    {\r\n        \"prodottoId\": 4,\r\n        \"ordineId\": 20,\r\n        \"codice\": \"FOTO_120X75\",\r\n        \"descrizione\": \"Foto 120 x 75\",\r\n        \"categoria\": \"foto\",\r\n        \"prezzo\": 120.57,\r\n        \"quantita\": 13\r\n    },    \r\n    {\r\n        \"prodottoId\": 6,\r\n        \"ordineId\": 20,\r\n        \"codice\": \"FOTO_90X75\",\r\n        \"descrizione\": \"Foto 90 x 75\",\r\n        \"categoria\": \"foto\",\r\n        \"prezzo\": 77.57,\r\n        \"quantita\": 13\r\n    }\r\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{ProdottiOrdinatiBaseUrl}}multiple",
+              "host": [
+                "{{ProdottiOrdinatiBaseUrl}}multiple"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UpdateProdottoOrdinato",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "        {\r\n            \"prodottoId\": 2,\r\n            \"ordineId\": 20,\r\n            \"codice\": \"FOTO_30X30\",\r\n            \"descrizione\": \"Foto 30 x 30\",\r\n            \"categoria\": \"foto\",\r\n            \"prezzo\": 30.57,\r\n            \"quantita\": 13\r\n        }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{ProdottiOrdinatiBaseUrl}}1",
+              "host": [
+                "{{ProdottiOrdinatiBaseUrl}}1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UpdateProdottiOrdinati",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "[\r\n    {\r\n        \"id\": 1,\r\n        \"prodottoId\": 1,\r\n        \"ordineId\": 1,\r\n        \"codice\": \"FOTO_120X75\",\r\n        \"descrizione\": \"Foto 120 x 75\",\r\n        \"categoria\": \"foto\",\r\n        \"prezzo\": 125.50,\r\n        \"quantita\": 3,\r\n        \"subtotale\": 878.50\r\n    },\r\n    {\r\n        \"id\": 2,\r\n        \"prodottoId\": 2,\r\n        \"ordineId\": 1,\r\n        \"codice\": \"FOTO_30X30\",\r\n        \"descrizione\": \"Foto 30 x 30\",\r\n        \"categoria\": \"foto\",\r\n        \"prezzo\": 25.50,\r\n        \"quantita\": 2,\r\n        \"subtotale\": 127.50\r\n    }\r\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{ProdottiOrdinatiBaseUrl}}multiple",
+              "host": [
+                "{{ProdottiOrdinatiBaseUrl}}multiple"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DeleteProdottoOrdinato",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{ProdottiOrdinatiBaseUrl}}6",
+              "host": [
+                "{{ProdottiOrdinatiBaseUrl}}6"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DeleteProdottiOrdinatiByOrdine",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{ProdottiOrdinatiBaseUrl}}ordine/1",
+              "host": [
+                "{{ProdottiOrdinatiBaseUrl}}ordine"
+              ],
+              "path": [
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DeleteProdottiOrdinati",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "[\r\n   \r\n    {\r\n        \"id\": 7,\r\n        \"prodottoId\": 4,\r\n        \"ordineId\": 20,\r\n        \"codice\": \"FOTO_120X75\",\r\n        \"descrizione\": \"Foto 120 x 75\",\r\n        \"categoria\": \"foto\",\r\n        \"prezzo\": 120.57,\r\n        \"quantita\": 13,\r\n        \"subtotale\": 1567.41\r\n    },\r\n    {\r\n        \"id\": 8,\r\n        \"prodottoId\": 6,\r\n        \"ordineId\": 20,\r\n        \"codice\": \"FOTO_90X75\",\r\n        \"descrizione\": \"Foto 90 x 75\",\r\n        \"categoria\": \"foto\",\r\n        \"prezzo\": 77.57,\r\n        \"quantita\": 13,\r\n        \"subtotale\": 1008.41\r\n    }\r\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{ProdottiOrdinatiBaseUrl}}multiple-del",
+              "host": [
+                "{{ProdottiOrdinatiBaseUrl}}multiple-del"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "ApiGateway",
+      "item": [
+        {
+          "name": "Ordini",
+          "item": [
+            {
+              "name": "GetOrdini",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}ordini/",
+                  "host": [
+                    "{{GatewayBaseUrl}}ordini"
+                  ],
+                  "path": [
+                    ""
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GetOrdine",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}ordini/1",
+                  "host": [
+                    "{{GatewayBaseUrl}}ordini"
+                  ],
+                  "path": [
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "CreateOrdine",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"acquirenteId\": 1,\r\n    \"recapitoCap\": \"98100\",\r\n    \"recapitoIndirizzo\": \"via del Vespro\",\r\n    \"recapitoCitta\": \"Messina\",\r\n    \"prodotti\": [\r\n        {\r\n            \"prodottoId\": 1,\r\n            \"quantita\": 7\r\n        },\r\n        {\r\n            \"prodottoId\": 2,\r\n            \"quantita\": 5\r\n        }\r\n    ]\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}ordini",
+                  "host": [
+                    "{{GatewayBaseUrl}}ordini"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "UpdateOrdine",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"recapitoCap\": \"98100\",\r\n    \"recapitoIndirizzo\": \"via del Vespro\",\r\n    \"recapitoCitta\": \"Messina\",\r\n    \"prodotti\": [\r\n        {\r\n            \"prodottoId\": 1,\r\n            \"quantita\": 1\r\n        }\r\n    ]\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}ordini/1",
+                  "host": [
+                    "{{GatewayBaseUrl}}ordini"
+                  ],
+                  "path": [
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "DeleteOrdine",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}ordini/1",
+                  "host": [
+                    "{{GatewayBaseUrl}}ordini"
+                  ],
+                  "path": [
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Prodotti",
+          "item": [
+            {
+              "name": "GetAllProdotti",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}prodotti",
+                  "host": [
+                    "{{GatewayBaseUrl}}prodotti"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GetProdotto",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}prodotti/1",
+                  "host": [
+                    "{{GatewayBaseUrl}}prodotti"
+                  ],
+                  "path": [
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "CreateProdotto",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"codice\": \"FOTO_120X75\",\r\n    \"descrizione\": \"Foto 120 x 75\",\r\n    \"prezzo\": 125.50,\r\n    \"categoria\": \"foto\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}prodotti",
+                  "host": [
+                    "{{GatewayBaseUrl}}prodotti"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "UpdateProdotto",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"codice\": \"FOTO_50X50\",\r\n    \"descrizione\": \"Foto 50 x 50\",\r\n    \"prezzo\": 60.50,\r\n    \"categoria\": \"foto\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}prodotti/1",
+                  "host": [
+                    "{{GatewayBaseUrl}}prodotti"
+                  ],
+                  "path": [
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "DeleteProdotto",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}prodotti/3",
+                  "host": [
+                    "{{GatewayBaseUrl}}prodotti"
+                  ],
+                  "path": [
+                    "3"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GetProdotti",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\r\n    1,2\r\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}multiple",
+                  "host": [
+                    "{{GatewayBaseUrl}}multiple"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Recapiti",
+          "item": [
+            {
+              "name": "GetRecapiti",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}recapiti",
+                  "host": [
+                    "{{GatewayBaseUrl}}recapiti"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GetRecapitoByOrdine",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}recapiti/ordine/2",
+                  "host": [
+                    "{{GatewayBaseUrl}}recapiti"
+                  ],
+                  "path": [
+                    "ordine",
+                    "2"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "UpdateRecapitoByOrdine",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"ordineId\": 1,\r\n    \"indirizzo\": \"via della VEspa\",\r\n    \"cap\": \"98100\",\r\n    \"citta\": \"Roma\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}recapiti/ordine/1",
+                  "host": [
+                    "{{GatewayBaseUrl}}recapiti"
+                  ],
+                  "path": [
+                    "ordine",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "DeleteRecapitoByOrdine",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}recapiti/ordine/1",
+                  "host": [
+                    "{{GatewayBaseUrl}}recapiti"
+                  ],
+                  "path": [
+                    "ordine",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GetRecapito",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}recapiti/2",
+                  "host": [
+                    "{{GatewayBaseUrl}}recapiti"
+                  ],
+                  "path": [
+                    "2"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "CreateRecapito",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"ordineId\": 1,\r\n    \"indirizzo\": \"via del Vespro\",\r\n    \"cap\": \"98100\",\r\n    \"citta\": \"Roma\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}recapiti",
+                  "host": [
+                    "{{GatewayBaseUrl}}recapiti"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "UpdateRecapito",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"ordineId\": 1,\r\n    \"indirizzo\": \"via della VEspa\",\r\n    \"cap\": \"98100\",\r\n    \"citta\": \"Roma\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}recapiti/1",
+                  "host": [
+                    "{{GatewayBaseUrl}}recapiti"
+                  ],
+                  "path": [
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "DeleteRecapito",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}recapiti/1",
+                  "host": [
+                    "{{GatewayBaseUrl}}recapiti"
+                  ],
+                  "path": [
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Utenti",
+          "item": [
+            {
+              "name": "GetUtenti",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}utenti",
+                  "host": [
+                    "{{GatewayBaseUrl}}utenti"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GetUtente",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}utenti/2",
+                  "host": [
+                    "{{GatewayBaseUrl}}utenti"
+                  ],
+                  "path": [
+                    "2"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "CreateUtente",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"username\": \"demetrio.marra\",\r\n    \"nominativo\": \"Demetrio Marra\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}utenti",
+                  "host": [
+                    "{{GatewayBaseUrl}}utenti"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "UpdateUtente",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"username\": \"demetrio.marra2\",\r\n    \"nominativo\": \"Demetrio Marra\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}utenti/1",
+                  "host": [
+                    "{{GatewayBaseUrl}}utenti"
+                  ],
+                  "path": [
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "DeleteUtente",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}utenti/1",
+                  "host": [
+                    "{{GatewayBaseUrl}}utenti"
+                  ],
+                  "path": [
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "ProdottiOrdinati",
+          "item": [
+            {
+              "name": "GetProdottiOrdinati",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}prodottiOrdinati",
+                  "host": [
+                    "{{GatewayBaseUrl}}prodottiOrdinati"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "DeleteProdottiOrdinati",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\r\n   \r\n    {\r\n        \"id\": 7,\r\n        \"prodottoId\": 4,\r\n        \"ordineId\": 20,\r\n        \"codice\": \"FOTO_120X75\",\r\n        \"descrizione\": \"Foto 120 x 75\",\r\n        \"categoria\": \"foto\",\r\n        \"prezzo\": 120.57,\r\n        \"quantita\": 13,\r\n        \"subtotale\": 1567.41\r\n    },\r\n    {\r\n        \"id\": 8,\r\n        \"prodottoId\": 6,\r\n        \"ordineId\": 20,\r\n        \"codice\": \"FOTO_90X75\",\r\n        \"descrizione\": \"Foto 90 x 75\",\r\n        \"categoria\": \"foto\",\r\n        \"prezzo\": 77.57,\r\n        \"quantita\": 13,\r\n        \"subtotale\": 1008.41\r\n    }\r\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}prodottiOrdinati/multiple",
+                  "host": [
+                    "{{GatewayBaseUrl}}prodottiOrdinati"
+                  ],
+                  "path": [
+                    "multiple"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "CreateProdottiOrdinati",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\r\n    {\r\n        \"prodottoId\": 4,\r\n        \"ordineId\": 20,\r\n        \"codice\": \"FOTO_120X75\",\r\n        \"descrizione\": \"Foto 120 x 75\",\r\n        \"categoria\": \"foto\",\r\n        \"prezzo\": 120.57,\r\n        \"quantita\": 13\r\n    },    \r\n    {\r\n        \"prodottoId\": 6,\r\n        \"ordineId\": 20,\r\n        \"codice\": \"FOTO_90X75\",\r\n        \"descrizione\": \"Foto 90 x 75\",\r\n        \"categoria\": \"foto\",\r\n        \"prezzo\": 77.57,\r\n        \"quantita\": 13\r\n    }\r\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}prodottiOrdinati/multiple",
+                  "host": [
+                    "{{GatewayBaseUrl}}prodottiOrdinati"
+                  ],
+                  "path": [
+                    "multiple"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GetProdottiOrdinatiByOrdine",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}prodottiOrdinati/ordine/20",
+                  "host": [
+                    "{{GatewayBaseUrl}}prodottiOrdinati"
+                  ],
+                  "path": [
+                    "ordine",
+                    "20"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GetProdottoOrdinato",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}prodottiOrdinati/2",
+                  "host": [
+                    "{{GatewayBaseUrl}}prodottiOrdinati"
+                  ],
+                  "path": [
+                    "2"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "CreateProdottoOrdinato",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "        {\r\n            \"prodottoId\": 4,\r\n            \"ordineId\": 20,\r\n            \"codice\": \"FOTO_120X75\",\r\n            \"descrizione\": \"Foto 120 x 75\",\r\n            \"categoria\": \"foto\",\r\n            \"prezzo\": 120.57,\r\n            \"quantita\": 13\r\n        }",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}prodottiOrdinati",
+                  "host": [
+                    "{{GatewayBaseUrl}}prodottiOrdinati"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "UpdateProdottoOrdinato",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "        {\r\n            \"prodottoId\": 2,\r\n            \"ordineId\": 20,\r\n            \"codice\": \"FOTO_30X30\",\r\n            \"descrizione\": \"Foto 30 x 30\",\r\n            \"categoria\": \"foto\",\r\n            \"prezzo\": 30.57,\r\n            \"quantita\": 13\r\n        }",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}prodottiOrdinati/1",
+                  "host": [
+                    "{{GatewayBaseUrl}}prodottiOrdinati"
+                  ],
+                  "path": [
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "DeleteProdottoOrdinato",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}prodottiOrdinati/1",
+                  "host": [
+                    "{{GatewayBaseUrl}}prodottiOrdinati"
+                  ],
+                  "path": [
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "DeleteProdottiOrdinatiByOrdine",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{GatewayBaseUrl}}prodottiOrdinati/ordine/1",
+                  "host": [
+                    "{{GatewayBaseUrl}}prodottiOrdinati"
+                  ],
+                  "path": [
+                    "ordine",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
