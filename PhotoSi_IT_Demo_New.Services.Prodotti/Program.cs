@@ -28,6 +28,11 @@ using (var serviceScope = app.Services.GetService<IServiceScopeFactory>()!.Creat
 
 
 // Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
 
 app.UseAuthorization();
 
